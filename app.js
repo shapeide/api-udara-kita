@@ -15,7 +15,9 @@ const connect = async () => {
     throw error;
   }
 };
-
+app.get("/", (req, res) => {
+  res.send("ETL Pipeline");
+});
 app.use(express.json());
 app.use("/api/air", airRoutes);
 
