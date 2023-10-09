@@ -1,7 +1,7 @@
-import express from "express";
-import { extractData } from "../controllers/air.js";
-const router = express.Router();
+import { Router } from "express";
+import { searchByCity } from "../controllers/air.js";
+const router = Router();
 
-router.get("/extract", extractData);
+router.get("/extract", searchByCity);
 
 export default router;
